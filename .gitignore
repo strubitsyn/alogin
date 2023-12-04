@@ -1,0 +1,4 @@
+vendor/*
+sqldump.sql
+composer.lock
+favicon.ico
