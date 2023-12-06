@@ -34,11 +34,11 @@ form.addEventListener('submit', (error) => {
     }
 
    if (incorrectInput !== "") {
-   // Change the error div tag to display the error message(s)
+   // Выводим сообщения об ошибках валидации в error div tag
    errorDiv.innerText = incorrectInput; 
-   // Change the color of the text to red
+   // Меняем цвет тега на красный
    errorDiv.style.color = 'red'; 
-   // Prevent the form button from submitting again, before fixing the issues
+   // Не даем пользователю отправить форму, пока не исправлены ошибки
    error.preventDefault(); 
 }
 });
