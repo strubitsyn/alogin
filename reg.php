@@ -35,8 +35,8 @@
     } else {
 ?>
     <form class="form" action="" method="post" id="form">
-        <h1 class="login-title">Создать аккаунт</h1>
-        <div id="error-message">Надо заполнить все обязательные поля</div>
+        <h1 class="login-title">Создать учетную запись / профиль пользователя</h1>
+        <div id="error-message">Все поля формы обязательно надо заполнить</div>
         <input type="text" class="login-input" name="username" id="username" placeholder="Логин" required />
         <input type="email" class="login-input" name="email" id="email" placeholder="Электропочта">
         <input type="password" class="login-input" name="password" id="password" placeholder="Пароль">
