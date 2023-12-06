@@ -1,5 +1,4 @@
 <?php
-// authsession.php file for authorized pages
 include("authsession.php");
 ?>
 <!DOCTYPE html>
@@ -14,7 +13,8 @@ include("authsession.php");
     <div class="form">
         <p>Добро пожаловать, <?php echo $_SESSION['username']; ?>!</p>
         <p>Доступны следующие действия:</p>
-        <p><a href="editprofile.php">Редактировать Профиль Пользователя</a>.</p>
+        <p><a href="editprofile.php">Редактировать / Смотреть профиль пользователя</a>.</p>
+        <p><a href="deleteprofile.php">Удалить профиль пользователя</a>.</p>
         <p><a href="logout.php">Выйти из системы</a>.</p>
     </div>
 </body>

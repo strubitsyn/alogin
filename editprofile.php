@@ -8,6 +8,7 @@ include("authsession.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Редактирование профиля <?php echo $_SESSION['username']; ?></title>
     <link rel="stylesheet" href="style.css" />
+    <script defer src="js/validate.js"></script>
 </head>
 <body>
     <div class="form">

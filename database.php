@@ -1,4 +1,6 @@
 <?php
+    error_reporting(E_ALL);
+    ini_set('display_errors', 'on');
     $dbconnect = mysqli_connect("localhost","root","1234567","alogin");
     // printf("Начальный набор символов: %s\n", mysqli_character_set_name($dbconnect));
 
@@ -8,6 +10,7 @@
 
     /* check db connect 
     report error on fail */
+    // var_dump($dbconnect);
     if (mysqli_connect_errno()){
         echo "Не удалось соединиться с базой MySQL: " . mysqli_connect_error();
     }

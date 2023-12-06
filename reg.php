@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Регистрация нового пользователя</title>
     <link rel="stylesheet" href="style.css" />
+    <script defer src="js/validate.js"></script>
 </head>
 <body>
 <?php
@@ -23,21 +24,22 @@
         if ($result) {
             echo "<div class='form'>
                   <h3>Вы успешно зарегистриовали аккаунт.</h3><br/>
-                  <p class='link'>Нажмите здесь, чтобы <a href='login.php'>войти</a></p>
+                  <p class='link'>Нажмите здесь, чтобы <a href='login.php'>войти в систему</a></p>
                   </div>";
         } else {
             echo "<div class='form'>
                   <h3>Обязательные поля не заполнены.</h3><br/>
-                  <p class='link'>Нажмите здесь, чтобы еще раз попробовать <a href='reg.php'>создать аккаунт пользователя</a>.</p>
+                  <p class='link'>Нажмите здесь, чтобы попробовать ещё раз <a href='reg.php'>зарегистрироваться как новый пользователь</a>.</p>
                   </div>";
         }
     } else {
 ?>
-    <form class="form" action="" method="post">
+    <form class="form" action="" method="post" id="form">
         <h1 class="login-title">Создать аккаунт</h1>
-        <input type="text" class="login-input" name="username" placeholder="Логин" required />
-        <input type="text" class="login-input" name="email" placeholder="Электропочта">
-        <input type="password" class="login-input" name="password" placeholder="Пароль">
+        <div id="error-message">Надо заполнить все обязательные поля</div>
+        <input type="text" class="login-input" name="username" id="username" placeholder="Логин" required />
+        <input type="email" class="login-input" name="email" id="email" placeholder="Электропочта">
+        <input type="password" class="login-input" name="password" id="password" placeholder="Пароль">
         <input type="submit" name="submit" value="Создать" class="login-button">
         <p class="link"><a href="login.php">Войти в систему</a></p>
     </form>
